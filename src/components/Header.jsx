@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FiMenu, FiX, FiSearch, FiChevronDown } from "react-icons/fi";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "../assets/logo.png";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,20 @@ const Header = () => {
     setProductsOpen(false);
   };
 
+  const navLinkClass = ({ isActive }) =>
+  `text-[11px] transition-colors ${
+    isActive
+      ? "font-semibold text-[#c73524]"
+      : "font-medium text-[#222] hover:text-[#c73524]"
+  }`;
+
+  const navLinkClassMobile = ({ isActive }) =>
+  `px-3 py-4 text-[14px] transition-colors ${
+    isActive
+      ? "font-semibold text-[#c73524]"
+      : "font-medium text-[#222] hover:text-[#c73524]"
+  }`;
+
   return (
     <>
       <header
@@ -47,12 +62,13 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="ml-auto hidden h-full items-center gap-7 lg:flex xl:gap-8">
-              <Link
+              <NavLink
                 to="/"
-                className="text-[11px] font-semibold text-[#c73524] transition-colors hover:text-[#9e2519]"
+                end
+                className={navLinkClass}
               >
                 Home
-              </Link>
+              </NavLink>
 
               {/* Products */}
               <div className="relative group">
@@ -88,33 +104,33 @@ const Header = () => {
                 </div>
               </div>
 
-              <Link
+              <NavLink
                 to="/inspiration"
-                className="text-[11px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
-              >
+                  className={navLinkClass}
+                >
                 Inspiration
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 to="/about"
-                className="text-[11px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+                className={navLinkClass}
               >
                 About Us
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 to="/dealer-network"
-                className="text-[11px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+                className={navLinkClass}
               >
                 Dealer Network
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 to="/contact"
-                className="text-[11px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+                className={navLinkClass}
               >
                 Contact
-              </Link>
+              </NavLink>
             </nav>
 
             {/* Search */}
@@ -192,13 +208,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <nav className="flex flex-col px-4 py-5">
-          <Link
+          <NavLink
             to="/"
             onClick={closeMenu}
-            className="border-b border-[#eee9e5] px-3 py-4 text-[14px] font-semibold text-[#c73524]"
+            className={navLinkClassMobile}
           >
             Home
-          </Link>
+          </NavLink>
 
           {/* Mobile Products */}
           <div className="border-b border-[#eee9e5]">
@@ -248,37 +264,37 @@ const Header = () => {
             </div>
           </div>
 
-          <Link
+          <NavLink
             to="/inspiration"
             onClick={closeMenu}
-            className="border-b border-[#eee9e5] px-3 py-4 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+            className={navLinkClassMobile}
           >
             Inspiration
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/about"
             onClick={closeMenu}
-            className="border-b border-[#eee9e5] px-3 py-4 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+            className={navLinkClassMobile}
           >
             About Us
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/dealer-network"
             onClick={closeMenu}
-            className="border-b border-[#eee9e5] px-3 py-4 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+            className={navLinkClassMobile}
           >
             Dealer Network
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/contact"
             onClick={closeMenu}
-            className="border-b border-[#eee9e5] px-3 py-4 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+            className={navLinkClassMobile}
           >
             Contact
-          </Link>
+          </NavLink>
 
           {/* Mobile Search */}
           <div className="mt-6 px-2">
