@@ -1,6 +1,7 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
 import { features } from "../../../../assets/data/features";
+import { TiArrowRight } from "react-icons/ti";
 
 const WhySection = () => {
   return (
@@ -26,10 +27,10 @@ const WhySection = () => {
 
           <button
             type="button"
-            className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold text-[#c73524] sm:flex cursor-pointer"
+            className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold text-[#c73524] sm:flex cursor-pointer transition-all duration-200 hover:gap-3"
           >
             Learn More
-            <span className="text-[15px]">→</span>
+            <span className="text-[15px]"><TiArrowRight /></span>
           </button>
         </div>
 
@@ -39,7 +40,7 @@ const WhySection = () => {
           className="mb-5 flex items-center gap-2 text-[11px] font-semibold text-[#c73524] sm:hidden"
         >
           Learn More
-          <span className="text-[15px]">→</span>
+          <span className="text-[15px]"><TiArrowRight /></span>
         </button>
 
         {/* Main Content */}
@@ -48,7 +49,8 @@ const WhySection = () => {
           <article className="group relative min-h-[360px] overflow-hidden rounded-[14px] sm:min-h-[400px] lg:min-h-[335px] xl:min-h-[365px]">
             <img
               src="./images/home.jpg"
-              alt="Rose Paints home"
+              alt="Delight Paints home"
+              loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
@@ -63,23 +65,6 @@ const WhySection = () => {
                 <br />
                 of time.
               </h3>
-
-              {/* <button
-                type="button"
-                className="flex w-fit items-center gap-3 text-[11px] font-medium text-white"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#c73524] shadow-md">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="ml-0.5 h-4 w-4"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-
-                Watch Our Story
-              </button> */}
               <span className="text-[12px] font-medium text-white">
                 Beauty that Endures
               </span>

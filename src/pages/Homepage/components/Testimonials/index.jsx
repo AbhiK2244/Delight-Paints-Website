@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { testimonials } from "../../../../assets/data/testimonials";
+import { TiArrowLeft, TiArrowRight } from "react-icons/ti";
 
 const Testimonials = () => {
   const carouselRef = useRef(null);
@@ -59,7 +60,7 @@ const Testimonials = () => {
                 cursor-pointer
               "
             >
-              <span className="text-[17px] leading-none">←</span>
+              <span className="text-[17px] leading-none"><TiArrowLeft /></span>
             </button>
 
             <button
@@ -68,7 +69,7 @@ const Testimonials = () => {
               aria-label="Next testimonials"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dededb] bg-white text-[#555] shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:border-[#c73524] hover:text-[#c73524] cursor-pointer"
             >
-              <span className="text-[17px] leading-none">→</span>
+              <span className="text-[17px] leading-none"><TiArrowRight /></span>
             </button>
           </div>
         </div>

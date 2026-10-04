@@ -26,8 +26,9 @@ const FeatureCard = ({ feature }) => {
 
       <img
         src={feature.image}
-        alt=""
+        alt={feature.title}
         aria-hidden="true"
+        loading="lazy"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
       />
     </article>
