@@ -13,7 +13,7 @@ const HeroSection = () => {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/video/hero.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/zgsarqop/video/upload/v1793170593/hero.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
