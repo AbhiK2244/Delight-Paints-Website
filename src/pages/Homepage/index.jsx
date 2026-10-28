@@ -4,10 +4,12 @@ import Testimonials from "./components/Testimonials";
 import PopularChoices from "./components/PopularChoices";
 import Campaigns from "./components/Campaigns";
 import ProductCategories from "./components/Categories";
+import HeroSection from "./components/HeroSection";
 
 const Homepage = () => {
   return (
     <div className="pt-16 bg-[#fdfcf9]">
+      <HeroSection />
       <ProductCategories />
       <PopularChoices />
       <WhySection />

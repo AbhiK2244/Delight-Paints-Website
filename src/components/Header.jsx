@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   const navLinkClass = ({ isActive }) =>
-  `text-[11px] transition-colors ${
+  `text-[14px] transition-colors ${
     isActive
       ? "font-semibold text-[#c73524]"
       : "font-medium text-[#222] hover:text-[#c73524]"
@@ -74,7 +74,7 @@ const Header = () => {
               <div className="relative group">
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-[11px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
+                  className="flex items-center gap-1 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
                 >
                   Products
                   <FiChevronDown className="text-[11px]" />
@@ -134,7 +134,7 @@ const Header = () => {
             </nav>
 
             {/* Search */}
-            <div className="relative z-10 ml-7 hidden w-[235px] xl:block">
+            <div className="relative z-10 ml-7 hidden w-[235px] lg:block">
               <div className="flex h-9.5 items-center rounded-full border border-[#d7d7d7] bg-white/90 px-4 shadow-[0_1px_5px_rgba(0,0,0,0.04)]">
                 <input
                   type="text"
