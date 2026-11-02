@@ -148,9 +148,6 @@ const Footer = () => {
             <a href="#" className="hover:text-[#9e2519] transition-colors">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-[#9e2519] transition-colors">
-              <FaLinkedin />
-            </a>
           </div>
         </div>
         </div>

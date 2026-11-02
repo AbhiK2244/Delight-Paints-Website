@@ -5,6 +5,7 @@ import PopularChoices from "./components/PopularChoices";
 import Campaigns from "./components/Campaigns";
 import ProductCategories from "./components/Categories";
 import HeroSection from "./components/HeroSection";
+import Location from "./components/Location";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <WhySection />
       <Campaigns />
       <Testimonials />
+      <Location />
     </div>
   );
 };

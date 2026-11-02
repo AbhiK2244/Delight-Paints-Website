@@ -44,12 +44,12 @@ const ProductCategories = () => {
             >
               <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/10" />
 
-              <div className="relative z-10 flex h-full flex-col items-start p-4 sm:p-5">
-                <h3 className="whitespace-pre-line text-[19px] font-bold leading-[1.02] tracking-tight text-[#111] sm:text-[20px] lg:text-[19px] xl:text-[20px] group-hover:text-white transition-colors duration-300">
+              <div className="relative z-10 w-fit flex flex-col items-start p-5">
+                <h3 className="whitespace-pre-line font-bold leading-[1.02] tracking-tight text-[#111] text-[25px] md:text-[26px] group-hover:text-white transition-colors duration-300 text-shadow-[0_2px_8px_rgba(255,255,255,1)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.title}
                 </h3>
 
-                <p className="mt-3 whitespace-pre-line text-[10px] font-medium leading-[1.35] text-[#333] sm:text-[11px] group-hover:text-white transition-colors duration-300">
+                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-[#333] text-[13px] group-hover:text-white transition-colors duration-300 text-shadow-[0_1px_1px_rgba(255,255,255,0.7)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.description}
                 </p>
 

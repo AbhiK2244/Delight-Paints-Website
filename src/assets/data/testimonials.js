@@ -14,7 +14,7 @@ export const testimonials = [
     location: "Lalitpur",
     avatar: "./images/avatars/avatar3.jpg",
     message:
-      "Beautiful colors and long lasting. Rose Paints made our home look exactly how we imagined.",
+      "Beautiful colors and long lasting. Delight Paints made our home look exactly how we imagined.",
     rating: 5,
   },
   {

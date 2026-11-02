@@ -56,7 +56,7 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Delight Paints"
-                className="h-12 w-auto object-contain sm:h-12.5"
+                className="w-auto object-contain h-12.5"
               />
             </Link>
 
@@ -72,13 +72,15 @@ const Header = () => {
 
               {/* Products */}
               <div className="relative group">
+                <NavLink to={"/products"} className={navLinkClass}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-[14px] font-medium text-[#222] transition-colors hover:text-[#c73524]"
-                >
+                  className="flex items-center gap-1"
+                  >
                   Products
                   <FiChevronDown className="text-[11px]" />
                 </button>
+                </NavLink>
 
                 <div className="invisible absolute left-1/2 top-full w-44 -translate-x-1/2 translate-y-2 rounded-lg border border-[#eee] bg-white py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <Link
@@ -118,12 +120,6 @@ const Header = () => {
                 About Us
               </NavLink>
 
-              <NavLink
-                to="/dealer-network"
-                className={navLinkClass}
-              >
-                Dealer Network
-              </NavLink>
 
               <NavLink
                 to="/contact"
@@ -278,14 +274,6 @@ const Header = () => {
             className={navLinkClassMobile}
           >
             About Us
-          </NavLink>
-
-          <NavLink
-            to="/dealer-network"
-            onClick={closeMenu}
-            className={navLinkClassMobile}
-          >
-            Dealer Network
           </NavLink>
 
           <NavLink

@@ -24,13 +24,14 @@ const FooterCTA = () => {
             </h2>
 
             <p className="mt-4 max-w-[430px] text-sm leading-relaxed text-white/95 sm:text-base">
-              Visit your nearest dealer and bring your walls to life with Rose
+              Visit your nearest dealer and bring your walls to life with Delight
               Paints.
             </p>
           </div>
         
           <a
-            href="/dealer-network"
+            href="https://maps.app.goo.gl/VBD8u7n2Tb55zoubA"
+            target="_blank"
             className={`md:mt-16 inline-flex items-center gap-1 rounded-full bg-white px-6 py-3 text-xs font-bold text-gray-900 shadow-md hover:shadow-lg sm:px-7 sm:py-3.5 float-animation`}
           >
             <IoLocation className="text-xl" />

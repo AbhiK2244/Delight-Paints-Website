@@ -1,6 +1,6 @@
 export const features = [
   {
-    image: "./images/feature3.png",
+    image: "./images/whysectionimages/advanced-tech.png",
     title: "Advanced",
     subtitle: "Technology",
     description: "Engineered for superior durability and finish.",
@@ -8,7 +8,7 @@ export const features = [
     className: "bg-[#f1eee9]",
   },
   {
-    image: "./images/feature4.png",
+    image: "./images/whysectionimages/weather-protection.png",
     title: "Weather",
     subtitle: "Protection",
     description: "Built to withstand Nepal's toughest weather.",
@@ -16,7 +16,7 @@ export const features = [
     className: "bg-[#efeee9]",
   },
   {
-    image: "./images/feature2.png",
+    image: "./images/whysectionimages/smooth-finish.png",
     title: "Smooth Finish",
     subtitle: "Design",
     description: "Elegant, even and long-lasting walls.",
@@ -24,7 +24,7 @@ export const features = [
     className: "bg-[#f4b5a9]",
   },
   {
-    image: "./images/feature1.png",
+    image: "./images/whysectionimages/colors.png",
     title: "Rich Colors",
     subtitle: "Colors",
     description: "A wide range of shades to match your style.",

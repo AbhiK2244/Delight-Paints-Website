@@ -48,7 +48,7 @@ const WhySection = () => {
           {/* Main Featured Card */}
           <article className="group relative min-h-[360px] overflow-hidden rounded-[14px] sm:min-h-[400px] lg:min-h-[335px] xl:min-h-[365px]">
             <img
-              src="./images/home.jpg"
+              src="./images/whysectionimages/home-that-stand.png"
               alt="Delight Paints home"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
