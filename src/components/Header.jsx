@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiMenu, FiX, FiSearch, FiChevronDown } from "react-icons/fi";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import logo from "../assets/logo.png";
 
 
@@ -8,6 +8,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,26 +29,26 @@ const Header = () => {
   };
 
   const navLinkClass = ({ isActive }) =>
-  `text-[14px] transition-colors ${
+  `text-[15px] transition-colors after:content-[''] after:block after:h-0.5 after:w-full after:bg-[#c73524] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 ${
     isActive
       ? "font-semibold text-[#c73524]"
-      : "font-medium text-[#222] hover:text-[#c73524]"
+      : "font-medium hover:text-[#c73524]"
   }`;
 
   const navLinkClassMobile = ({ isActive }) =>
   `px-3 py-4 text-[14px] transition-colors ${
     isActive
       ? "font-semibold text-[#c73524]"
-      : "font-medium text-[#222] hover:text-[#c73524]"
+      : "font-medium text-[#111] hover:text-[#c73524]"
   }`;
 
   return (
     <>
       <header
-        className={`fixed top-0 z-50 w-full overflow-visible transition-all duration-300 ${
+        className={`fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[90%] overflow-visible transition-all duration-300 rounded-full ${
           isScrolled
-            ? " bg-transparent shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-xl"
-            : "bg-[#fdfcf9]"
+            ? "bg-transparent text-black shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-xl"
+            : "bg-transparent" + (location.pathname === "/" ? " text-white" : " text-black")
         }`}
       >
         <div className="relative h-15 w-full">
@@ -71,18 +73,18 @@ const Header = () => {
               </NavLink>
 
               {/* Products */}
-              <div className="relative group">
+              {/* <div className="relative group"> */}
                 <NavLink to={"/products"} className={navLinkClass}>
-                <button
+                {/* <button
                   type="button"
                   className="flex items-center gap-1"
-                  >
+                  > */}
                   Products
-                  <FiChevronDown className="text-[11px]" />
-                </button>
+                  {/* <FiChevronDown className="text-[11px]" /> */}
+                {/* </button> */}
                 </NavLink>
 
-                <div className="invisible absolute left-1/2 top-full w-44 -translate-x-1/2 translate-y-2 rounded-lg border border-[#eee] bg-white py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                {/* <div className="invisible absolute left-1/2 top-full w-44 -translate-x-1/2 translate-y-2 rounded-lg border border-[#eee] bg-white py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <Link
                     to="/products/interior"
                     className="block px-4 py-2 text-[11px] text-[#333] hover:bg-[#faf4f1] hover:text-[#c73524]"
@@ -103,8 +105,8 @@ const Header = () => {
                   >
                     Primers
                   </Link>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
 
               <NavLink
                 to="/inspiration"
@@ -130,7 +132,7 @@ const Header = () => {
             </nav>
 
             {/* Search */}
-            <div className="relative z-10 ml-7 hidden w-[235px] lg:block">
+            {/* <div className="relative z-10 ml-7 hidden w-[235px] lg:block">
               <div className="flex h-9.5 items-center rounded-full border border-[#d7d7d7] bg-white/90 px-4 shadow-[0_1px_5px_rgba(0,0,0,0.04)]">
                 <input
                   type="text"
@@ -146,7 +148,7 @@ const Header = () => {
                   <FiSearch className="text-[17px]" />
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Mobile hamburger */}
             <button
@@ -285,7 +287,7 @@ const Header = () => {
           </NavLink>
 
           {/* Mobile Search */}
-          <div className="mt-6 px-2">
+          {/* <div className="mt-6 px-2">
             <div className="flex h-11 items-center rounded-full border border-[#d8d4d0] bg-white px-4">
               <input
                 type="text"
@@ -301,7 +303,7 @@ const Header = () => {
                 <FiSearch className="text-[18px]" />
               </button>
             </div>
-          </div>
+          </div> */}
         </nav>
       </aside>
     </>

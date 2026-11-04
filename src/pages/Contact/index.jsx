@@ -12,19 +12,19 @@ const contactInfo = [
   {
     id: 1,
     title: "Visit Us",
-    text: "Biratnagar, Nepal",
+    text: "Pathari, Morang",
     icon: FiMapPin,
   },
   {
     id: 2,
     title: "Call Us",
-    text: "+977 01-1234567",
+    text: "021-555345",
     icon: FiPhone,
   },
   {
     id: 3,
     title: "Email Us",
-    text: "info@delightpaints.com",
+    text: "delight2075@gmail.com",
     icon: FiMail,
   },
   {

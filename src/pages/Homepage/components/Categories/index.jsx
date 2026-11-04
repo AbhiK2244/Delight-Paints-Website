@@ -32,7 +32,7 @@ const ProductCategories = () => {
           </Link>
         </div>
 
-        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {categories.map((category) => (
             <Link
               key={category.id}
@@ -45,15 +45,15 @@ const ProductCategories = () => {
               <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/10" />
 
               <div className="relative z-10 w-fit flex flex-col items-start p-5">
-                <h3 className="whitespace-pre-line font-bold leading-[1.02] tracking-tight text-[#111] text-[25px] md:text-[26px] group-hover:text-white transition-colors duration-300 text-shadow-[0_2px_8px_rgba(255,255,255,1)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
+                <h3 className="whitespace-pre-line font-bold leading-[1.02] tracking-tight text-white text-[25px] md:text-[26px] group-hover:text-[#111] transition-colors duration-300  group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.title}
                 </h3>
 
-                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-[#333] text-[13px] group-hover:text-white transition-colors duration-300 text-shadow-[0_1px_1px_rgba(255,255,255,0.7)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
+                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-white text-[13px] group-hover:text-[#333] transition-colors duration-300 text-shadow-[0_1px_1px_rgba(255,255,255,0.7)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.description}
                 </p>
 
-                <span className="mt-4 flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/30 text-[#222] transition-all duration-200 group-hover:bg-white group-hover:shadow-sm">
+                <span className="mt-4 flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white text-[#222] transition-all duration-200 group-hover:bg-white/30 group-hover:shadow-sm">
                   <TiArrowRight className="text-[17px]" />
                 </span>
               </div>

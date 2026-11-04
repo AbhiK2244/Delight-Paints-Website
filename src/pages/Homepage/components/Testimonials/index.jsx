@@ -86,7 +86,7 @@ const Testimonials = () => {
             snap-mandatory
             pb-2
             w-full
-            scrollbar-none
+            scrollbar-thin
             [&::-webkit-scrollbar]:hidden
             md:overflow-hidden
           "

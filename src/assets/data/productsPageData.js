@@ -1,10 +1,11 @@
 export const categories = [
   "All Products",
-  "Damp Guard",
+  "Waterproofing",
   "Enamel",
   "Interior",
   "Exterior",
   "Primer",
+  "Decorative and Specialty Paints",
 ];
 
 export const products = [
@@ -12,7 +13,7 @@ export const products = [
     id: 1,
     name: "Leak Proof",
     slug: "leak-proof",
-    category: "Damp Guard",
+    category: "Waterproofing",
     image: "/images/product/leak-proof.png",
   },
   {
@@ -27,17 +28,9 @@ export const products = [
     id: 3,
     name: "Artist Gold 500ml",
     slug: "artist-gold",
-    category: "Enamel",
-    specialType: "Metallic Paint",
+    category: "Decorative and Specialty Paints",
+    specialType: "",
     image: "/images/product/artist_gold_500ml2.png",
-  },
-  {
-    id: 4,
-    name: "Artist Gold 200ml",
-    slug: "artist-gold-200ml",
-    category: "Enamel",
-    specialType: "Metallic Paint",
-    image: "/images/product/artist_gold_200ml2.png",
   },
   {
     id: 5,
@@ -52,6 +45,14 @@ export const products = [
     slug: "super-high-gloss-enamel",
     category: "Enamel",
     image: "/images/product/super-high-gloss-enamel.png",
+  },
+  {
+    id: 4,
+    name: "Artist Gold 200ml",
+    slug: "artist-gold-200ml",
+    category: "Decorative and Specialty Paints",
+    specialType: "",
+    image: "/images/product/artist_gold_200ml2.png",
   },
   {
     id: 7,

@@ -32,7 +32,7 @@ const Footer = () => {
           <ul className="text-xs space-y-2 text-neutral-400">
             <li>
               <Link
-                to="/category/interior-paints"
+                to="/products?category=Interior"
                 className="hover:text-[#9e2519] transition-colors"
               >
                 Interior Paints
@@ -40,7 +40,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/category/exterior-paints"
+                to="/products?category=Exterior"
                 className="hover:text-[#9e2519] transition-colors"
               >
                 Exterior Paints
@@ -48,7 +48,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/category/primers"
+                to="/products?category=Primer"
                 className="hover:text-[#9e2519] transition-colors"
               >
                 Primers
@@ -56,7 +56,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/category/waterproofing"
+                to="/products?category=Waterproofing"
                 className="hover:text-[#9e2519] transition-colors"
               >
                 Waterproofing
@@ -64,10 +64,18 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/category/budget-range"
+                to="/products?category=Enamel"
                 className="hover:text-[#9e2519] transition-colors"
               >
-                Budget Range
+                Enamel
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/products?category=Decorative%20and%20Specialty%20Paints"
+                className="hover:text-[#9e2519] transition-colors"
+              >
+                Decorative & Specialty Paints
               </Link>
             </li>
           </ul>
@@ -95,10 +103,12 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/dealers"
+                to="https://maps.app.goo.gl/VBD8u7n2Tb55zoubA"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#9e2519] transition-colors"
               >
-                Dealer Network
+                Locate Dealer
               </Link>
             </li>
           </ul>
@@ -121,15 +131,7 @@ const Footer = () => {
                 to="/contact"
                 className="hover:text-[#9e2519] transition-colors"
               >
-                color guide
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/product-brochures"
-                className="hover:text-[#9e2519] transition-colors"
-              >
-                Product Brochures
+                Color Guide
               </Link>
             </li>
           </ul>

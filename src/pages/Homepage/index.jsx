@@ -9,7 +9,7 @@ import Location from "./components/Location";
 
 const Homepage = () => {
   return (
-    <div className="pt-16 bg-[#fdfcf9]">
+    <div className="bg-[#fdfcf9]">
       <HeroSection />
       <ProductCategories />
       <PopularChoices />

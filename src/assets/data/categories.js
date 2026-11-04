@@ -22,10 +22,10 @@ export const categories = [
   },
   {
     id: 4,
-    title: "Damp Guard",
+    title: "Water\nProofing",
     description: "Protection\nin every season",
     image: "./images/categories/damp-guard.png",
-    link: "/products?category=Damp%20Guard",
+    link: "/products?category=Waterproofing",
   },
   {
     id: 5,
@@ -33,5 +33,12 @@ export const categories = [
     description: "Quality colors\nfor every home",
     image: "./images/categories/enamel.png",
     link: "/products?category=Enamel",
+  },
+  {
+    id: 6,
+    title: "Decorative &\nSpecialty Paints",
+    description: "Colors that\ninspire creativity",
+    image: "./images/categories/decorative-speciality.png",
+    link: "/products?category=Decorative%20and%20Specialty%20Paints",
   },
 ];
