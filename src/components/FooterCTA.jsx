@@ -1,16 +1,15 @@
-import { useState } from "react";
 import { IoLocation } from "react-icons/io5";
 import { TiArrowRightThick } from "react-icons/ti";
+import footer_cta from "/images/footer_cta.png";
 
 
 const FooterCTA = () => {
-    const [floatAnimate, setFloatAnimate] = useState(true);
   return (
     <section className="relative w-full overflow-hidden">
       <div
         className="relative h-[280px] md:h-[250px] w-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('./images/footer_cta.png')",
+          backgroundImage: `url(${footer_cta})`,
         }}
       >
         <div className="absolute inset-0 bg-black/5" />
