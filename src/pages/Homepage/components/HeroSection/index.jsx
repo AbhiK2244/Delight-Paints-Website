@@ -22,7 +22,7 @@ const HeroSection = () => {
         {/* Content */}
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-3 items-center px-4 py-14 text-center md:px-6">
           <span className="mb-2 rounded-full bg-[#d9ff62] px-3 py-2 text-[8px] font-semibold text-[#20251a] md:mb-3 md:px-4 md:text-[11px]">
-            Smooth, simple, and stress-free color choices
+            Beautiful Spaces. Lasting Impressions.
           </span>
 
           <h1 className="text-[clamp(3rem,13vw,7rem)] font-normal leading-[0.83] tracking-[-0.055em] text-white">
@@ -34,9 +34,9 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-4 max-w-[470px] text-[11px] font-normal leading-[1.5] text-white/95 sm:mt-5 sm:text-xs md:text-[13px]">
-            An eco-friendly paint manufacturer based specializing in high-quality
+            Crafting beautiful spaces with premium paints that blend
             <br className="hidden sm:block" />
-            coatings for both interior and exterior surfaces
+            timeless elegance, exceptional quality, and lasting protection.
           </p>
         </div>
       </div>
