@@ -73,7 +73,7 @@ const Contact = () => {
     <div className="min-h-screen bg-[#fdfcf9]">
       {/* Header */}
       <section className="pb-8 pt-18 px-6 md:px-8 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
+        <div className="mx-auto mt-8 max-w-[1400px]">
           <div className="max-w-[650px]">
             <h1 className="text-[34px] font-bold leading-[1.05] tracking-[-0.04em] text-[#102b4c] sm:text-[42px] md:text-[48px]">
               Let's talk about your

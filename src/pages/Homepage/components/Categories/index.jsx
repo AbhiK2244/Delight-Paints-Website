@@ -42,14 +42,16 @@ const ProductCategories = () => {
                 backgroundImage: `url(${category.image})`,
               }}
             >
-              <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/10" />
+              {/* <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/10" /> */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/65 group-hover:from-white/30 via-black/30 group-hover:via-black/5 to-transparent" />
+
 
               <div className="relative z-10 w-fit flex flex-col items-start p-5">
                 <h3 className="whitespace-pre-line font-bold leading-[1.02] tracking-tight text-white text-[25px] md:text-[26px] group-hover:text-[#111] transition-colors duration-300  group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.title}
                 </h3>
 
-                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-white text-[13px] group-hover:text-[#333] transition-colors duration-300">
+                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-white text-[13px] group-hover:text-[#111] transition-colors duration-300">
                   {category.description}
                 </p>
 

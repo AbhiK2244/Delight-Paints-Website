@@ -38,8 +38,8 @@ const Products = () => {
     <section className="min-h-screen bg-[#fdfcf9] px-4 pb-16 pt-24 sm:px-6 md:px-8 lg:px-10 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
         {/* Page Header */}
-        <div className="mb-8 text-center">
-          <h1 className="font-bold text-center leading-tight tracking-[-0.04em] text-[#102b4c] text-[40px] md:text-[46px]">
+        <div className="mb-8">
+          <h1 className="font-bold leading-tight tracking-[-0.04em] text-[#102b4c] text-[40px] md:text-[46px]">
             Our Products
           </h1>
 

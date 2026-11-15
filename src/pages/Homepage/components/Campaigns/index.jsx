@@ -19,14 +19,6 @@ const Campaigns = () => {
               Our Campaigns
             </h2>
           </div>
-
-          {/* <Link
-            to="/campaigns"
-            className="mb-1 hidden items-center gap-1 text-[11px] font-semibold text-[#c73524] transition-all duration-200 hover:gap-2 sm:flex"
-          >
-            <span>View All Campaigns</span>
-            <TiArrowRight className="text-[19px]" />
-          </Link> */}
         </div>
 
         {/* Campaign Cards */}
@@ -56,30 +48,10 @@ const Campaigns = () => {
                     {campaign.description}
                   </p>
                 </div>
-
-                {/* <Link
-                  to="/campaigns"
-                  className="inline-flex items-center gap-1 rounded-full bg-white px-5 py-2.5 text-[10px] font-bold text-[#222] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg sm:px-6 sm:py-3 sm:text-[11px]"
-                >
-                  <span>{campaign.buttonText}</span>
-
-                  <TiArrowRight className="text-[18px]" />
-                </Link> */}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Mobile View All */}
-        {/* <div className="mt-5 flex justify-end sm:hidden">
-          <Link
-            to="/campaigns"
-            className="flex items-center gap-1 text-[11px] font-semibold text-[#c73524]"
-          >
-            <span>View All Campaigns</span>
-            <TiArrowRight className="text-[18px]" />
-          </Link>
-        </div> */}
       </div>
     </section>
   );

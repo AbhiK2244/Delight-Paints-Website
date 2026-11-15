@@ -6,13 +6,15 @@ import footer_cta from "/images/footer.png";
 const FooterCTA = () => {
   return (
     <section className="relative w-full overflow-hidden">
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" /> */}
       <div
         className="relative h-[280px] md:h-[250px] w-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${footer_cta})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
+
 
         <div className="relative max-w-[1400px] mx-auto flex flex-col md:flex-row items-center md:justify-between gap-4 px-6 md:px-20 py-10 lg:px-42">
           <div className="max-w-120 text-white">
