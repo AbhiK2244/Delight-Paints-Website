@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiCopy, FiCheck } from "react-icons/fi";
+import { colours } from "../../assets/data/colors";
 
 const categories = [
   "All Colours",
@@ -14,340 +15,6 @@ const categories = [
   "White & Off-white",
 ];
 
-const colours = [
-  // Red
-  {
-    id: 1,
-    name: "Pure Red",
-    code: "8093",
-    category: "Red",
-    hex: "#D5212B",
-  },
-  {
-    id: 2,
-    name: "Rhode Island Red-N",
-    code: "9947",
-    category: "Red",
-    hex: "#8E3033",
-  },
-  {
-    id: 3,
-    name: "Winery-N",
-    code: "9948",
-    category: "Red",
-    hex: "#6D2338",
-  },
-  {
-    id: 4,
-    name: "Maroon Mood-N",
-    code: "9997",
-    category: "Red",
-    hex: "#652C3B",
-  },
-  {
-    id: 5,
-    name: "Ketchup Red-N",
-    code: "K001",
-    category: "Red",
-    hex: "#B82F29",
-  },
-
-  // Orange
-  {
-    id: 6,
-    name: "Orange Grove-N",
-    code: "9898",
-    category: "Orange",
-    hex: "#D97832",
-  },
-  {
-    id: 7,
-    name: "Mustard Orange-N",
-    code: "9899",
-    category: "Orange",
-    hex: "#C67A27",
-  },
-  {
-    id: 8,
-    name: "Rustic Earth-N",
-    code: "9901",
-    category: "Orange",
-    hex: "#A65D3D",
-  },
-  {
-    id: 9,
-    name: "Dreamsicle",
-    code: "7954",
-    category: "Orange",
-    hex: "#F2A36B",
-  },
-  {
-    id: 10,
-    name: "Orange Spark",
-    code: "7951",
-    category: "Orange",
-    hex: "#ED7A27",
-  },
-
-  // Yellow
-  {
-    id: 11,
-    name: "Cream Caress",
-    code: "7835",
-    category: "Yellow",
-    hex: "#E8D7A4",
-  },
-  {
-    id: 12,
-    name: "Gold Gleam",
-    code: "7834",
-    category: "Yellow",
-    hex: "#D7AE3A",
-  },
-  {
-    id: 13,
-    name: "Sunkissed",
-    code: "7833",
-    category: "Yellow",
-    hex: "#E8B85B",
-  },
-  {
-    id: 14,
-    name: "Golden Apple",
-    code: "7832",
-    category: "Yellow",
-    hex: "#D2B54B",
-  },
-  {
-    id: 15,
-    name: "Lemonade",
-    code: "7830",
-    category: "Yellow",
-    hex: "#E8D978",
-  },
-
-  // Green
-  {
-    id: 16,
-    name: "Green Republic",
-    code: "7676",
-    category: "Green",
-    hex: "#78944A",
-  },
-  {
-    id: 17,
-    name: "Tranquil Green",
-    code: "8388",
-    category: "Green",
-    hex: "#A3B89A",
-  },
-  {
-    id: 18,
-    name: "Mint Essence",
-    code: "L117",
-    category: "Green",
-    hex: "#B7D8C0",
-  },
-  {
-    id: 19,
-    name: "Ocean Spray",
-    code: "0947",
-    category: "Green",
-    hex: "#6D9D84",
-  },
-  {
-    id: 20,
-    name: "Alpine Green",
-    code: "7588",
-    category: "Green",
-    hex: "#547C60",
-  },
-
-  // Blue
-  {
-    id: 21,
-    name: "Sky Mimic",
-    code: "7420",
-    category: "Blue",
-    hex: "#B5D4E8",
-  },
-  {
-    id: 22,
-    name: "Fairytale",
-    code: "7251",
-    category: "Blue",
-    hex: "#8BAFC8",
-  },
-  {
-    id: 23,
-    name: "Phantom Lake",
-    code: "7372",
-    category: "Blue",
-    hex: "#6E91B0",
-  },
-  {
-    id: 24,
-    name: "Sharp Navy-N",
-    code: "9642",
-    category: "Blue",
-    hex: "#263B5D",
-  },
-  {
-    id: 25,
-    name: "Ink Blue",
-    code: "7246",
-    category: "Blue",
-    hex: "#263C61",
-  },
-
-  // Purple and Pink
-  {
-    id: 26,
-    name: "Baby Orchid-N",
-    code: "L187",
-    category: "Purple & Pink",
-    hex: "#D9B9D7",
-  },
-  {
-    id: 27,
-    name: "Lavender Secret",
-    code: "7163",
-    category: "Purple & Pink",
-    hex: "#B8A5CF",
-  },
-  {
-    id: 28,
-    name: "Pink Mist",
-    code: "8092",
-    category: "Purple & Pink",
-    hex: "#E9C5D0",
-  },
-  {
-    id: 29,
-    name: "Rose Essence",
-    code: "9417",
-    category: "Purple & Pink",
-    hex: "#CE91A6",
-  },
-  {
-    id: 30,
-    name: "Acai Berry-N",
-    code: "9585",
-    category: "Purple & Pink",
-    hex: "#663A61",
-  },
-
-  // Brown
-  {
-    id: 31,
-    name: "Cold Coffee",
-    code: "L129",
-    category: "Brown",
-    hex: "#A78B76",
-  },
-  {
-    id: 32,
-    name: "Sands of Thar-N",
-    code: "9879",
-    category: "Brown",
-    hex: "#C5A77E",
-  },
-  {
-    id: 33,
-    name: "Wheat Sprig",
-    code: "7891",
-    category: "Brown",
-    hex: "#C8B58B",
-  },
-  {
-    id: 34,
-    name: "Pine Cone",
-    code: "7887",
-    category: "Brown",
-    hex: "#76604C",
-  },
-  {
-    id: 35,
-    name: "Roast Brown",
-    code: "4198",
-    category: "Brown",
-    hex: "#6A463A",
-  },
-
-  // Grey
-  {
-    id: 36,
-    name: "Confetti",
-    code: "8300",
-    category: "Grey",
-    hex: "#D5D3D0",
-  },
-  {
-    id: 37,
-    name: "White Gold",
-    code: "8292",
-    category: "Grey",
-    hex: "#D6D0C0",
-  },
-  {
-    id: 38,
-    name: "Snowflake",
-    code: "8332",
-    category: "Grey",
-    hex: "#EBECEA",
-  },
-  {
-    id: 39,
-    name: "Ice Grey",
-    code: "8259",
-    category: "Grey",
-    hex: "#C9D0D2",
-  },
-  {
-    id: 40,
-    name: "Galactic Grey-N",
-    code: "K078",
-    category: "Grey",
-    hex: "#666B75",
-  },
-
-  // White and Off-white
-  {
-    id: 41,
-    name: "Air Breeze",
-    code: "9436",
-    category: "White & Off-white",
-    hex: "#F4F4EB",
-  },
-  {
-    id: 42,
-    name: "Winged Angel",
-    code: "8100",
-    category: "White & Off-white",
-    hex: "#F4F0E9",
-  },
-  {
-    id: 43,
-    name: "White Clay",
-    code: "8620",
-    category: "White & Off-white",
-    hex: "#E4DDD3",
-  },
-  {
-    id: 44,
-    name: "Gossamer",
-    code: "8052",
-    category: "White & Off-white",
-    hex: "#D9D9CF",
-  },
-  {
-    id: 45,
-    name: "Crushed Ice",
-    code: "L140",
-    category: "White & Off-white",
-    hex: "#E9EDEF",
-  },
-];
 
 const ColourFinder = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Colours");
@@ -356,11 +23,11 @@ const ColourFinder = () => {
   const filteredColours =
     selectedCategory === "All Colours"
       ? colours
-      : colours.filter((colour) => colour.category === selectedCategory);
+      : colours.filter((colour) => colours.category === selectedCategory);
 
   const handleCopy = async (colour) => {
     try {
-      await navigator.clipboard.writeText(colour.hex);
+      await navigator.clipboard.writeText(colour.hex + " (" + colour.name + ")");
       setCopiedColour(colour.id);
 
       setTimeout(() => {
@@ -372,19 +39,15 @@ const ColourFinder = () => {
   };
 
   return (
-    <section className="min-h-screen bg-[#fdfcf9] px-4 pb-16 pt-24 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+    <section className="min-h-screen bg-[#fdfcf9] pb-16 pt-24 px-6 md:px-8 lg:px-10 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
         {/* Page Heading */}
         <div className="mb-8">
-          {/* <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#c73524] sm:text-[11px]">
-            Explore Colours
-          </p> */}
-
-          <h1 className="text-[32px] font-bold leading-tight tracking-[-0.04em] text-[#102b4c] sm:text-[40px] md:text-[46px]">
+          <h1 className="font-bold leading-tight tracking-[-0.04em] text-[#102b4c] text-[40px] md:text-[46px]">
             Find Your Perfect Colour
           </h1>
 
-          <p className="mt-2 max-w-[600px] text-[12px] leading-6 text-[#777] sm:text-[13px]">
+          <p className="mt-2 max-w-[600px] leading-6 text-[#777] text-[13px]">
             Discover beautiful shades for every space. From subtle neutrals to
             bold statement colours, find the perfect shade to express your
             style.
@@ -399,17 +62,17 @@ const ColourFinder = () => {
                 Colour Families
               </h2>
 
-              <p className="mt-1 text-[10px] text-[#999] sm:text-[11px]">
+              <p className="mt-1 text-[#999] text-[11px]">
                 Choose a colour family to explore its shades.
               </p>
             </div>
 
-            <span className="shrink-0 text-[10px] font-semibold text-[#888] sm:text-[11px]">
+            <span className="shrink-0  font-semibold text-[#888] text-[11px]">
               {filteredColours.length} Shades
             </span>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:overflow-visible">
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:overflow-visible">
             {categories.map((category) => (
               <button
                 key={category}
@@ -476,23 +139,16 @@ const ColourFinder = () => {
 
                 {/* Colour Information */}
                 <div className="px-1 pb-1 pt-3">
-
-                  <div className="mt-1.5 flex items-center justify-between gap-1">
-                  <h3 className="truncate text-[11px] font-bold text-[#102b4c] sm:text-[12px]">
+                  <h3 className="truncate font-bold text-[#102b4c] text-[12px]">
                     {colour.name}
                   </h3>
-                    {/* <span className="text-[9px] font-medium text-[#999] sm:text-[10px]">
-                      Ref. {colour.code}
-                    </span> */}
 
-                    {/* <span className="text-[9px] font-medium text-[#777] sm:text-[10px]">
-                      {colour.hex}
-                    </span> */}
-                    <p className="mt-1 text-[9px] text-[#aaa]">
-                      {colour.category}
-                    </p>
-                  </div>
+                  <div className="mt-1.5 flex items-center justify-between gap-1">
+                  <p className="mt-1 text-[9px] text-[#aaa]">
+                    {colour.category}
+                  </p>
                 </div>
+              </div>
               </div>
             ))}
           </div>

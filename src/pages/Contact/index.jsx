@@ -274,7 +274,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-5 inline-flex items-center gap-1 rounded-full bg-[#c73524] px-6 py-3 text-[11px] font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b52e20] hover:shadow-lg sm:px-7"
+                className="mt-5 inline-flex items-center gap-1 rounded-full bg-[#c73524] px-6 py-3 text-[11px] font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b52e20] hover:shadow-lg sm:px-7 disabled:cursor-not-allowed disabled:bg-[#c73524]/70 disabled:shadow-none"
               >
                 <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                 <TiArrowRight className="text-[18px]" />
@@ -284,8 +284,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      {/* <section className="px-4 pb-12 sm:px-6 md:px-8 lg:px-10">
+      {/* Bottom part need help choosing */}
+      <section className="px-4 pb-12 sm:px-6 md:px-8 lg:px-10">
         <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[18px] bg-[#f3e6e0]">
           <div className="flex flex-col items-start justify-between gap-5 p-6 sm:p-8 md:flex-row md:items-center">
             <div>
@@ -311,7 +311,7 @@ const Contact = () => {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };

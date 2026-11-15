@@ -337,11 +337,6 @@ const ProductDetails = () => {
                 </div>
               ))}
             </div>
-
-            {/* <p className="mt-4 rounded-lg bg-[#faf5f1] p-3 text-[10px] leading-5 text-[#777]">
-              For exact technical specifications, coverage and drying times,
-              please refer to the official Technical Data Sheet (TDS).
-            </p> */}
           </div>
 
           {/* How to Use */}
@@ -377,18 +372,6 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Note */}
-        {/* <div className="mt-5 flex items-start gap-3 rounded-xl border border-[#eee5da] bg-[#faf5ed] p-4 sm:p-5">
-          <FiInfo className="mt-0.5 shrink-0 text-lg text-[#c73524]" />
-
-          <p className="text-[10px] leading-5 text-[#777] sm:text-[11px]">
-            Product descriptions and application instructions are provided
-            for general guidance. Always follow the official product packaging
-            and Technical Data Sheet for accurate application methods,
-            specifications and safety instructions.
-          </p>
-        </div> */}
       </div>
     </section>
   );

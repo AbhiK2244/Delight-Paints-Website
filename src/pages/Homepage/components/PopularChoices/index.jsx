@@ -40,13 +40,13 @@ const PopularChoices = () => {
             .map((product) => (
               <div
                 key={product.id}
-                className="group relative min-h-[380px] overflow-hidden rounded-[15px] bg-[#eee8e0] sm:min-h-[420px] lg:min-h-[385px]"
+                className="group relative overflow-hidden rounded-[15px] bg-[#eee8e0] min-h-[420px] lg:min-h-[385px]"
               >
                 <img
                     src={product.image}
                     alt={product.title}
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-cover object-[80%_center] md:object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 {/* this is for gradient */}
                 <div className="absolute inset-0 bg-linear-to-r from-gray-100/85 via-white/35 to-transparent" />
@@ -107,7 +107,7 @@ const PopularChoices = () => {
               .map((product) => (
                 <div
                   key={product.id}
-                  className="group relative min-h-[185px] overflow-hidden rounded-[15px] bg-[#f0ece7] sm:min-h-[205px] lg:min-h-0"
+                  className="group relative overflow-hidden rounded-[15px] bg-[#f0ece7] min-h-[205px] md:min-h-[300px] lg:min-h-0"
                 >
                   <img
                     src={product.image}
@@ -163,56 +163,3 @@ const PopularChoices = () => {
 };
 
 export default PopularChoices;
-
-// import React from "react";
-// import { products } from "../../../../assets/data/products";
-// import ProductCard from "./components/ProductCard";
-
-// const PopularChoices = () => {
-//   return (
-//     <section className="w-full bg-[#fdfcf9] px-4 py-12 sm:px-6 md:px-8 lg:px-10 xl:px-12 z-0">
-//       <div className="mx-auto max-w-[1400px]">
-//         <div className="mb-6 flex items-end justify-between gap-4 sm:mb-8">
-//           <div>
-//             <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#d17b67] sm:text-[12px]">
-//               Featured Products
-//             </p>
-
-//             <h2 className="text-[28px] font-bold leading-none tracking-[-0.03em] text-[#111] sm:text-[34px] md:text-[38px]">
-//               Our Popular Choices
-//             </h2>
-
-//             <p className="mt-2 text-[12px] text-[#777] sm:text-[14px]">
-//               Trusted by homeowners, loved by professionals.
-//             </p>
-//           </div>
-
-//           <button
-//             type="button"
-//             className="hidden shrink-0 text-[12px] font-semibold text-[#c73524] transition-colors hover:text-[#8e2117] sm:block cursor-pointer"
-//           >
-//             View All Products <span className="ml-1">→</span>
-//           </button>
-//         </div>
-
-//         <button
-//           type="button"
-//           className="mb-5 text-[12px] font-semibold text-[#c73524] sm:hidden"
-//         >
-//           View All Products <span className="ml-1">→</span>
-//         </button>
-
-//         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-//           {products.map((product) => (
-//             <ProductCard
-//               key={`${product.name}-${product.type}`}
-//               product={product}
-//             />
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default PopularChoices;

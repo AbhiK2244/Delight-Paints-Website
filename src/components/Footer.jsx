@@ -142,13 +142,13 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex space-x-4 text-neutral-400 text-xl">
-            <a href="https://www.facebook.com/thedelightpaints" className="hover:text-[#9e2519] transition-colors">
+            <a href="https://www.facebook.com/thedelightpaints" target="_blank" className="hover:text-[#9e2519] transition-colors">
               <FaFacebook />
             </a>
-            <a href="https://www.tiktok.com/@delightpaints7" className="hover:text-[#9e2519] transition-colors">
+            <a href="https://www.tiktok.com/@delightpaints7" target="_blank" className="hover:text-[#9e2519] transition-colors">
               <FaTiktok />
             </a>
-            <a href="https://www.instagram.com/delightpaints75/" className="hover:text-[#9e2519] transition-colors">
+            <a href="https://www.instagram.com/delightpaints75/" target="_blank" className="hover:text-[#9e2519] transition-colors">
               <FaInstagram />
             </a>
           </div>
