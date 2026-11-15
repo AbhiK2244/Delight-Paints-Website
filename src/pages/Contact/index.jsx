@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
-import {
-  FiMapPin,
-  FiPhone,
-  FiMail,
-  FiClock,
-} from "react-icons/fi";
+
+import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 import { TiArrowRight } from "react-icons/ti";
+import sendContactEmail from "../../services/emailService";
+import toast from "react-hot-toast";
 
 const contactInfo = [
   {
@@ -36,13 +34,47 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      setIsSubmitting(true);
+
+      await sendContactEmail({
+        name,
+        email,
+        phone,
+        subject,
+        message,
+      });
+
+      toast.success("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setSubject("");
+      setMessage("");
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      toast.error("Unable to send your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#fdfcf9]">
       {/* Header */}
-      <section className="px-4 pb-8 pt-18 sm:px-6 md:px-8 lg:px-10">
+      <section className="pb-8 pt-18 px-6 md:px-8 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
           <div className="max-w-[650px]">
-
             <h1 className="text-[34px] font-bold leading-[1.05] tracking-[-0.04em] text-[#102b4c] sm:text-[42px] md:text-[48px]">
               Let's talk about your
               <br className="hidden sm:block" />
@@ -50,9 +82,8 @@ const Contact = () => {
             </h1>
 
             <p className="mt-4 max-w-[590px] text-sm leading-6 text-[#666] sm:text-[15px]">
-              Have a question about our products, colors, or services?
-              Our team is here to help you find the right solution for your
-              home.
+              Have a question about our products, colors, or services? Our team
+              is here to help you find the right solution for your home.
             </p>
           </div>
         </div>
@@ -77,8 +108,8 @@ const Contact = () => {
               </h2>
 
               <p className="mt-3 max-w-[350px] text-[12px] leading-5 text-white/70 sm:text-[13px]">
-                Whether you need product guidance, color advice, or help
-                finding a dealer, feel free to reach out.
+                Whether you need product guidance, color advice, or help finding
+                a dealer, feel free to reach out.
               </p>
 
               {/* Contact Details */}
@@ -87,10 +118,7 @@ const Contact = () => {
                   const Icon = item.icon;
 
                   return (
-                    <div
-                      key={item.id}
-                      className="flex items-start gap-3"
-                    >
+                    <div key={item.id} className="flex items-start gap-3">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#f3a69a]">
                         <Icon className="text-[17px]" />
                       </div>
@@ -138,7 +166,7 @@ const Contact = () => {
               </h2>
             </div>
 
-            <form className="mt-7">
+            <form onSubmit={handleSubmit} className="mt-7">
               {/* Name + Email */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
@@ -152,6 +180,8 @@ const Contact = () => {
                   <input
                     id="name"
                     type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Enter your name"
                     className="h-11 w-full rounded-lg border border-[#dedbd7] bg-[#fdfcf9] px-4 text-[12px] text-[#222] outline-none transition-all duration-200 placeholder:text-[#999] focus:border-[#c73524] focus:bg-white focus:ring-2 focus:ring-[#c73524]/10"
                   />
@@ -168,6 +198,8 @@ const Contact = () => {
                   <input
                     id="email"
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="h-11 w-full rounded-lg border border-[#dedbd7] bg-[#fdfcf9] px-4 text-[12px] text-[#222] outline-none transition-all duration-200 placeholder:text-[#999] focus:border-[#c73524] focus:bg-white focus:ring-2 focus:ring-[#c73524]/10"
                   />
@@ -186,6 +218,8 @@ const Contact = () => {
                 <input
                   id="phone"
                   type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="Enter your phone number"
                   className="h-11 w-full rounded-lg border border-[#dedbd7] bg-[#fdfcf9] px-4 text-[12px] text-[#222] outline-none transition-all duration-200 placeholder:text-[#999] focus:border-[#c73524] focus:bg-white focus:ring-2 focus:ring-[#c73524]/10"
                 />
@@ -203,6 +237,8 @@ const Contact = () => {
                 <select
                   id="subject"
                   defaultValue=""
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   className="h-11 w-full rounded-lg border border-[#dedbd7] bg-[#fdfcf9] px-4 text-[12px] text-[#555] outline-none transition-all duration-200 focus:border-[#c73524] focus:bg-white focus:ring-2 focus:ring-[#c73524]/10"
                 >
                   <option value="" disabled>
@@ -227,6 +263,8 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="5"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us how we can help..."
                   className="w-full resize-none rounded-lg border border-[#dedbd7] bg-[#fdfcf9] px-4 py-3 text-[12px] leading-5 text-[#222] outline-none transition-all duration-200 placeholder:text-[#999] focus:border-[#c73524] focus:bg-white focus:ring-2 focus:ring-[#c73524]/10"
                 />
@@ -235,9 +273,10 @@ const Contact = () => {
               {/* Submit */}
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="mt-5 inline-flex items-center gap-1 rounded-full bg-[#c73524] px-6 py-3 text-[11px] font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b52e20] hover:shadow-lg sm:px-7"
               >
-                <span>Send Message</span>
+                <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                 <TiArrowRight className="text-[18px]" />
               </button>
             </form>

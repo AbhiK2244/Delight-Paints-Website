@@ -73,15 +73,8 @@ const Header = () => {
               </NavLink>
 
               {/* Products */}
-              {/* <div className="relative group"> */}
                 <NavLink to={"/products"} className={navLinkClass}>
-                {/* <button
-                  type="button"
-                  className="flex items-center gap-1"
-                  > */}
                   Products
-                  {/* <FiChevronDown className="text-[11px]" /> */}
-                {/* </button> */}
                 </NavLink>
 
                 {/* <div className="invisible absolute left-1/2 top-full w-44 -translate-x-1/2 translate-y-2 rounded-lg border border-[#eee] bg-white py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
@@ -109,10 +102,10 @@ const Header = () => {
               {/* </div> */}
 
               <NavLink
-                to="/inspiration"
+                to="/colors"
                   className={navLinkClass}
                 >
-                Inspiration
+                  Colors
               </NavLink>
 
               <NavLink
@@ -231,12 +224,20 @@ const Header = () => {
 
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                productsOpen ? "max-h-40" : "max-h-0"
+                productsOpen ? "max-h-60" : "max-h-0"
               }`}
             >
               <div className="pb-2 pl-6">
                 <Link
-                  to="/products/interior"
+                  to="/products"
+                  onClick={closeMenu}
+                  className="block py-2.5 text-[12px] text-[#666]"
+                >
+                  All Products
+                </Link>
+
+                <Link
+                  to="/products?category=Interior"
                   onClick={closeMenu}
                   className="block py-2.5 text-[12px] text-[#666]"
                 >
@@ -244,7 +245,7 @@ const Header = () => {
                 </Link>
 
                 <Link
-                  to="/products/exterior"
+                  to="/products?category=Exterior"
                   onClick={closeMenu}
                   className="block py-2.5 text-[12px] text-[#666]"
                 >
@@ -252,22 +253,46 @@ const Header = () => {
                 </Link>
 
                 <Link
-                  to="/products/primers"
+                  to="/products?category=Primer"
                   onClick={closeMenu}
                   className="block py-2.5 text-[12px] text-[#666]"
                 >
                   Primers
+                </Link>
+
+                <Link
+                  to="/products?category=Waterproofing"
+                  onClick={closeMenu}
+                  className="block py-2.5 text-[12px] text-[#666]"
+                >
+                  Waterproofing
+                </Link>
+
+                <Link
+                  to="/products?category=Enamel"
+                  onClick={closeMenu}
+                  className="block py-2.5 text-[12px] text-[#666]"
+                >
+                  Enamel
+                </Link>
+
+                <Link
+                  to="/products?category=Decorative%20and%20Specialty%20Paints"
+                  onClick={closeMenu}
+                  className="block py-2.5 text-[12px] text-[#666]"
+                >
+                  Decorative & Specialty Paints
                 </Link>
               </div>
             </div>
           </div>
 
           <NavLink
-            to="/inspiration"
+            to="/colors"
             onClick={closeMenu}
             className={navLinkClassMobile}
           >
-            Inspiration
+            Colors
           </NavLink>
 
           <NavLink

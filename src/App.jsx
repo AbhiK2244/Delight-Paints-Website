@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layout/MainLayout";
 import ProductDetails from "./pages/ProductDetails";
+import ColourFinder from "./pages/Colours";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/colors",
+        element: <ColourFinder />,
       },
       {
         path: "/product/:slug",

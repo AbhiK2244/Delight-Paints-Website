@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Recommendations = ({ relatedProducts, products }) => {
   return (
-    <aside className="rounded-2xl border border-[#eee9e5] bg-[#faf5f5] p-4 sm:p-5 lg:col-span-2 xl:col-span-1">
+    <aside className="rounded-2xl border h-fit border-[#eee9e5] bg-[#faf5f5] p-4 sm:p-5 lg:col-span-2 xl:col-span-1">
       <div className="mb-5">
         <div className="flex items-center gap-2">
           <span className="h-7 w-1 rounded-full bg-[#c73524]" />

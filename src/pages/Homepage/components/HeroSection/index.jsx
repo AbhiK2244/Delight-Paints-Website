@@ -35,7 +35,7 @@ const HeroSection = () => {
 
           <p className="mt-4 max-w-[470px] text-[11px] font-normal leading-[1.5] text-white/95 sm:mt-5 sm:text-xs md:text-[13px]">
             Crafting beautiful spaces with premium paints that blend
-            <br className="hidden sm:block" />
+            <br className="block" />
             timeless elegance, exceptional quality, and lasting protection.
           </p>
         </div>

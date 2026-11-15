@@ -20,7 +20,7 @@ const WhySection = () => {
 
             <p className="mt-2 max-w-[480px] text-[12px] leading-[1.35] text-[#777] sm:text-[13px]">
               Advanced technology, reliable performance, and finishes
-              <br className="hidden sm:block" />
+              <br/>
               that keep your home beautiful for years.
             </p>
           </div>

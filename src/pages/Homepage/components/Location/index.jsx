@@ -11,7 +11,7 @@ const Location = () => {
     <section className="w-full bg-[#fdfcf9] px-4 py-12 sm:px-6 sm:py-14 md:px-8 lg:px-10 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-6">
-          <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#c73524] sm:text-[11px]">
+          <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#d17b67] sm:text-[11px]">
             Come Visit Us
           </p>
 

@@ -18,7 +18,7 @@ const ProductCategories = () => {
             </h2>
 
             <p className="mt-2 flex-1 text-[11px] leading-[1.4] text-[#666] sm:text-[12px] md:text-[13px]">
-              From interiors to exteriors, primers to waterproofing. find the
+              From interiors to exteriors, primers to waterproofing. Find the
               perfect solution for your home.
             </p>
           </div>
@@ -49,7 +49,7 @@ const ProductCategories = () => {
                   {category.title}
                 </h3>
 
-                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-white text-[13px] group-hover:text-[#333] transition-colors duration-300 text-shadow-[0_1px_1px_rgba(255,255,255,0.7)] group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
+                <p className="mt-3 whitespace-pre-line font-medium leading-[1.35] text-white text-[13px] group-hover:text-[#333] transition-colors duration-300">
                   {category.description}
                 </p>
 

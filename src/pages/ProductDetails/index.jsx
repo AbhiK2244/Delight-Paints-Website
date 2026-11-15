@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useParams } from "react-router";
 import {
@@ -11,14 +10,48 @@ import {
   FiInfo,
   FiArrowUpRight,
   FiChevronRight,
+  FiPackage,
+  FiTool,
+  FiMaximize2,
+  FiClock,
+  FiGrid,
+  FiThermometer,
+  FiCpu,
+  FiAward,
+  FiSliders,
+  FiPercent,
+  FiEdit3,
+  FiWind,
+  FiClipboard,
 } from "react-icons/fi";
 import { TiArrowRight } from "react-icons/ti";
 import { products, recommendations } from "../../assets/data/products.js";
 import Recommendations from "./Recommendations.jsx";
 
 
-// Recommended Products
-// Only name, category and slug are stored here.
+
+const specificationIcons = {
+  "Product Type": FiPackage,
+  "Finish": FiDroplet,
+  "Application": FiTool,
+  "Surface": FiLayers,
+  "Suitable Surfaces": FiGrid,
+  "Coverage": FiMaximize2,
+  "Drying Time": FiClock,
+  "Application Temperature": FiThermometer,
+  "Coats": FiLayers,
+  "Technology": FiCpu,
+  "Performance Warranty": FiShield,
+  "Certification": FiAward,
+  "Formulation": FiSliders,
+  "Thinner": FiDroplet,
+  "Dilution": FiPercent,
+  "Recommended Undercoats": FiShield,
+  "Brush Thinning": FiEdit3,
+  "Spray Thinning": FiWind,
+  "First Coat Drying": FiClock,
+  "Primer Preparation": FiClipboard,
+};
 
 const featureIcons = [FiShield, FiDroplet, FiSun, FiLayers];
 
@@ -60,7 +93,6 @@ const ProductDetails = () => {
   return (
     <section className="min-h-screen bg-[#fdfcf9] px-4 pb-16 pt-24 sm:px-6 md:px-8 lg:px-10 xl:px-12">
       <div className="mx-auto max-w-[1500px]">
-
         {/* Breadcrumb */}
         <div className="mb-6 flex flex-wrap items-center gap-2 text-[10px] text-[#777] sm:text-[11px]">
           <Link
@@ -92,16 +124,13 @@ const ProductDetails = () => {
 
           <FiChevronRight />
 
-          <span className="font-bold text-[#c73524]">
-            {product.name}
-          </span>
+          <span className="font-bold text-[#c73524]">{product.name}</span>
         </div>
 
         {/* Main Product Layout */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] xl:grid-cols-[minmax(320px,0.95fr)_minmax(350px,1.1fr)_minmax(280px,0.8fr)]">
-
           {/* Main Product Image */}
-          <div className="group relative flex min-h-[350px] items-center justify-center overflow-hidden rounded-2xl border border-[#eeeae5] bg-gradient-to-br from-[#f4f0eb] via-[#faf7f3] to-[#eee9e2] p-6 sm:min-h-[440px] sm:p-10 xl:min-h-[610px]">
+          <div className="group relative flex min-h-[350px] max-h-[610px] items-center justify-center overflow-hidden rounded-2xl border border-[#eeeae5] bg-gradient-to-br from-[#f4f0eb] via-[#faf7f3] to-[#eee9e2] p-6 sm:min-h-[440px] sm:p-10 xl:min-h-[610px]">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/60 blur-3xl" />
 
             <span className="absolute left-5 top-5 z-10 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-[9px] font-bold uppercase tracking-wide text-[#102b4c] shadow-sm backdrop-blur-sm sm:left-6 sm:top-6 sm:text-[10px]">
@@ -134,7 +163,6 @@ const ProductDetails = () => {
 
           {/* Product Information */}
           <div className="flex flex-col py-1">
-
             <div className="mb-3 flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-[#eee9fb] px-4 py-2 text-[9px] font-bold uppercase tracking-wide text-[#51418b] sm:text-[10px]">
                 {product.category === "Primer"
@@ -178,7 +206,7 @@ const ProductDetails = () => {
                       ][index % 4]
                     }`}
                   >
-                    <Icon className="text-xl text-[#c73524]" />
+                    {/* <Icon className="text-xl text-[#c73524]" /> */}
 
                     <p className="text-[10px] font-semibold leading-[1.3] text-[#26364e]">
                       {feature}
@@ -218,44 +246,30 @@ const ProductDetails = () => {
               </div>
             )}
 
-            {/* Quick Specifications */}
-            <div className="mt-5 grid grid-cols-3 divide-x divide-[#e9e5e0] rounded-xl border border-[#eeeae5] bg-[#f8f6f3] p-3">
-              <div className="px-2">
-                <FiDroplet className="mb-2 text-lg text-[#c73524]" />
-                <p className="text-[10px] font-bold text-[#102b4c]">
-                  Finish
-                </p>
-                <p className="mt-1 text-[9px] leading-4 text-[#777]">
-                  {product.specifications.find(
-                    (item) => item.label === "Finish"
-                  )?.value}
-                </p>
-              </div>
+            {product.specifications?.length > 0 && (
+              <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-[#eeeae5] sm:grid-cols-3">
+                {product.specifications.map((item, index) => {
+                  const Icon = specificationIcons[item.label] || FiInfo;
 
-              <div className="px-3">
-                <FiLayers className="mb-2 text-lg text-[#c73524]" />
-                <p className="text-[10px] font-bold text-[#102b4c]">
-                  Coverage
-                </p>
-                <p className="mt-1 text-[9px] leading-4 text-[#777]">
-                  {product.specifications.find(
-                    (item) => item.label === "Coverage"
-                  )?.value}
-                </p>
-              </div>
+                  return (
+                    <div
+                      key={`${item.label}-${index}`}
+                      className="min-w-0 bg-[#f8f6f3] p-3 sm:p-4"
+                    >
+                      <Icon className="mb-2 text-lg text-[#c73524]" />
 
-              <div className="px-3">
-                <FiInfo className="mb-2 text-lg text-[#c73524]" />
-                <p className="text-[10px] font-bold text-[#102b4c]">
-                  Application
-                </p>
-                <p className="mt-1 text-[9px] leading-4 text-[#777]">
-                  {product.specifications.find(
-                    (item) => item.label === "Application"
-                  )?.value}
-                </p>
+                      <p className="text-[10px] font-bold text-[#102b4c]">
+                        {item.label}
+                      </p>
+
+                      <p className="mt-1 break-words text-[9px] leading-4 text-[#777]">
+                        {item.value}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
-            </div>
+            )}
 
             {/* Action Buttons */}
             <div className="mt-5 flex flex-wrap gap-3">
@@ -281,12 +295,14 @@ const ProductDetails = () => {
           </div>
 
           {/* Recommendation section */}
-          <Recommendations relatedProducts={relatedProducts} products={products} />
+          <Recommendations
+            relatedProducts={relatedProducts}
+            products={products}
+          />
         </div>
 
         {/* Additional Information of the product */}
         <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
-
           {/* Specifications */}
           <div className="rounded-2xl border border-[#eeeae5] bg-white p-5 sm:p-7">
             <div className="mb-5 flex items-center gap-3">

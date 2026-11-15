@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import FooterCTA from "./FooterCTA";
+import { FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -120,15 +121,15 @@ const Footer = () => {
           <ul className="text-xs space-y-2 text-neutral-400">
             <li>
               <Link
-                to="/faqs"
+                to="/contact"
                 className="hover:text-[#9e2519] transition-colors"
               >
-                FAQs
+                Contact Support
               </Link>
             </li>
             <li>
               <Link
-                to="/contact"
+                to="/colors"
                 className="hover:text-[#9e2519] transition-colors"
               >
                 Color Guide
@@ -141,13 +142,13 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex space-x-4 text-neutral-400 text-xl">
-            <a href="#" className="hover:text-[#9e2519] transition-colors">
+            <a href="https://www.facebook.com/thedelightpaints" className="hover:text-[#9e2519] transition-colors">
               <FaFacebook />
             </a>
-            <a href="#" className="hover:text-[#9e2519] transition-colors">
-              <FaTwitter />
+            <a href="https://www.tiktok.com/@delightpaints7" className="hover:text-[#9e2519] transition-colors">
+              <FaTiktok />
             </a>
-            <a href="#" className="hover:text-[#9e2519] transition-colors">
+            <a href="https://www.instagram.com/delightpaints75/" className="hover:text-[#9e2519] transition-colors">
               <FaInstagram />
             </a>
           </div>

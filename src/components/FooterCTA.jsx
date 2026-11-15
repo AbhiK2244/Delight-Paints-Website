@@ -1,6 +1,6 @@
 import { IoLocation } from "react-icons/io5";
 import { TiArrowRightThick } from "react-icons/ti";
-import footer_cta from "/images/footer_cta.png";
+import footer_cta from "/images/footer.png";
 
 
 const FooterCTA = () => {
@@ -22,7 +22,7 @@ const FooterCTA = () => {
               Home Together.
             </h2>
 
-            <p className="mt-4 max-w-[430px] text-sm leading-relaxed text-white/95 sm:text-base">
+            <p className="mt-4 max-w-[430px] text-sm  text-white/95 sm:text-base">
               Visit your nearest dealer and bring your walls to life with Delight
               Paints.
             </p>
