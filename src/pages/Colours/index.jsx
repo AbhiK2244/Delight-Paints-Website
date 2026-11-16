@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiCopy, FiCheck } from "react-icons/fi";
-import { colours } from "../../assets/data/colors";
+import { colours } from "../../assets/data/colors.js";
 
 const categories = [
   "All Colours",
@@ -23,7 +23,7 @@ const ColourFinder = () => {
   const filteredColours =
     selectedCategory === "All Colours"
       ? colours
-      : colours.filter((colour) => colours.category === selectedCategory);
+      : colours.filter((colour) => colour.category === selectedCategory);
 
   const handleCopy = async (colour) => {
     try {
