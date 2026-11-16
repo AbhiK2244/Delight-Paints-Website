@@ -20,7 +20,7 @@ const FooterCTA = () => {
           <div className="max-w-120 text-white">
             <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight sm:text-4xl lg:text-4xl">
               Let's Create a Brighter
-              <br className="hidden sm:block" />
+              <br/>
               Home Together.
             </h2>
 
