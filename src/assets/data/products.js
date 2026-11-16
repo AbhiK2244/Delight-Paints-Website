@@ -13,7 +13,7 @@ export const products = [
       "Designed for concrete and masonry",
       "Compatible with the recommended crack-repair system"
     ],
-    "warranty": null,
+    "warranty": "10 Years",
     "specifications": [
       {
         "label": "Product Type",
