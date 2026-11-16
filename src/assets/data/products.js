@@ -390,7 +390,7 @@ export const products = [
       "Suitable for interior cement-plastered walls",
       "Roller application"
     ],
-    "warranty": null,
+    "warranty": "7+ Years",
     "specifications": [
       {
         "label": "Product Type",
@@ -438,7 +438,7 @@ export const products = [
       "Beautiful Colour Options",
       "Easy Application"
     ],
-    "warranty": null,
+    "warranty": "12+ Years",
     "specifications": [
       {
         "label": "Product Type",
