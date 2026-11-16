@@ -1,99 +1,55 @@
-import React, { useRef } from "react";
+import React from "react";
 import TestimonialCard from "./TestimonialCard";
-import { testimonials } from "../../../../assets/data/testimonials";
-import { TiArrowLeft, TiArrowRight } from "react-icons/ti";
+import { testimonials } from "../../../../assets/data/testimonials.js";
 
 const Testimonials = () => {
-  const carouselRef = useRef(null);
+  if (!testimonials?.length) return null;
 
-  const scrollCarousel = (direction) => {
-    if (!carouselRef.current) return;
-
-    const container = carouselRef.current;
-    const card = container.querySelector("article");
-
-    if (!card) return;
-
-    const gap = 16;
-    const scrollAmount = card.offsetWidth + gap;
-
-    container.scrollBy({
-      left: direction === "right" ? scrollAmount : -scrollAmount,
-      behavior: "smooth",
-    });
-  };
   return (
-    <section className="w-full bg-[#fdfcf9] px-4 py-10 sm:px-6 sm:py-12 md:px-8 lg:px-10 xl:px-12">
-      <div className="mx-auto max-w-350">
+    <section className="w-full overflow-hidden bg-[#fdfcf9] py-12 sm:py-14 md:py-16">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div className="mb-5 flex items-end justify-between gap-4 sm:mb-6">
-          <div>
-            <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#d17b67] sm:text-[11px]">
-              Real Stories
-            </p>
+        <div className="mb-7 sm:mb-9">
+          <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#d17b67] sm:text-[11px]">
+            Real Stories
+          </p>
 
-            <h2 className="text-[27px] font-bold leading-[1] tracking-[-0.035em] text-[#111] sm:text-[32px] md:text-[35px]">
-              What Our Customers Say
-            </h2>
-          </div>
+          <h2 className="text-[27px] font-bold leading-[1.05] tracking-[-0.035em] text-[#111] sm:text-[32px] md:text-[38px]">
+            What Our Customers Say
+          </h2>
 
-          <div className="hidden items-center gap-2 md:flex">
-            <button
-              type="button"
-              onClick={() => scrollCarousel("left")}
-              aria-label="Previous testimonials"
-              className="
-                flex
-                h-9
-                w-9
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#dededb]
-                bg-white
-                text-[#555]
-                shadow-[0_2px_8px_rgba(0,0,0,0.04)]
-                transition-all
-                hover:border-[#c73524]
-                hover:text-[#c73524]
-                cursor-pointer
-              "
-            >
-              <span className="text-[17px] leading-none"><TiArrowLeft /></span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => scrollCarousel("right")}
-              aria-label="Next testimonials"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dededb] bg-white text-[#555] shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:border-[#c73524] hover:text-[#c73524] cursor-pointer"
-            >
-              <span className="text-[17px] leading-none"><TiArrowRight /></span>
-            </button>
-          </div>
+          <p className="mt-2 max-w-md text-[11px] leading-relaxed text-[#777] sm:text-[12px]">
+            The experiences and trust that make us proud.
+          </p>
         </div>
+      </div>
 
-        {/* Testimonials Carousel */}
-        <div
-          ref={carouselRef}
-          className="
-            flex
-            gap-3
-            overflow-x-auto
-            scroll-smooth
-            snap-x
-            snap-mandatory
-            pb-2
-            w-full
-            scrollbar-thin
-            [&::-webkit-scrollbar]:hidden
-            md:overflow-hidden
-          "
-        >
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
+      {/* Infinite Marquee */}
+      <div
+        className="testimonial-marquee w-full"
+        role="region"
+        aria-label="Customer testimonials"
+      >
+        <div className="testimonial-marquee__track">
+          {/* First set */}
+          <div className="testimonial-marquee__group">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={`first-${testimonial.id ?? index}`}
+                testimonial={testimonial}
+              />
+            ))}
+          </div>
+
+          {/* Duplicated set for seamless looping */}
+          <div className="testimonial-marquee__group" aria-hidden="true">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={`second-${testimonial.id ?? index}`}
+                testimonial={testimonial}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

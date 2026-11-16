@@ -32,3 +32,68 @@ body {
 .float-animation:hover {
   animation-play-state: paused;
 }
+
+
+
+/* Testimonials: infinite left-to-right marquee */
+
+.testimonial-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 4%,
+    black 96%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 4%,
+    black 96%,
+    transparent
+  );
+}
+
+.testimonial-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: testimonial-marquee-right 45s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee__group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+/* Pause on hover or interaction */
+.testimonial-marquee:hover .testimonial-marquee__track,
+.testimonial-marquee:active .testimonial-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonial-marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee__track {
+    animation: none;
+    transform: none;
+  }
+
+  .testimonial-marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+}
