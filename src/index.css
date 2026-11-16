@@ -39,6 +39,8 @@ body {
 
 .testimonial-marquee {
   overflow: hidden;
+  position: relative;
+  padding: 22px 0 30px;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
