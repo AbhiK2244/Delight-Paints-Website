@@ -77,7 +77,7 @@ const Contact = () => {
           <div className="max-w-[650px]">
             <h1 className="text-[34px] font-bold leading-[1.05] tracking-[-0.04em] text-[#102b4c] sm:text-[42px] md:text-[48px]">
               Let's talk about your
-              <br className="hidden sm:block" />
+              <br />
               next project.
             </h1>
 
