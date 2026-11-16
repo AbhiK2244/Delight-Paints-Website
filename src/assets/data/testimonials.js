@@ -2,8 +2,8 @@ export const testimonials = [
   {
     id: 1,
     name: "Abhishek Kamati",
-    location: "Kathmandu",
-    avatar: "./images/avatars/avatar1.jpeg",
+    location: "Siraha",
+    avatar: "./images/avatars/avatar2.jpg",
     message:
       "Excellent quality and finish. Our home looks brand new even after years!",
     rating: 5,
@@ -11,7 +11,7 @@ export const testimonials = [
   {
     id: 2,
     name: "Sujeta KC",
-    location: "Lalitpur",
+    location: "Kathmandu",
     avatar: "./images/avatars/avatar3.jpg",
     message:
       "Beautiful colors and long lasting. Delight Paints made our home look exactly how we imagined.",
@@ -20,7 +20,7 @@ export const testimonials = [
   {
     id: 3,
     name: "Ramesh Adhikari",
-    location: "Pokhara",
+    location: "Biratnagar",
     avatar: "./images/avatars/avatar2.jpg",
     message:
       "Easy to apply and great support from the team. Highly recommended for Nepal homes.",
@@ -29,7 +29,7 @@ export const testimonials = [
   {
     id: 4,
     name: "Anisha Sharma",
-    location: "Bhaktapur",
+    location: "Itahari",
     avatar: "./images/avatars/avatar3.jpg",
     message:
       "The finish looks premium and the colors have stayed beautiful for a long time.",

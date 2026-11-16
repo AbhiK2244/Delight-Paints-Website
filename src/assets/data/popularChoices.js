@@ -7,10 +7,11 @@ export const popularChoices = [
   {
     id: 1,
     type: "Exterior Emulsion",
-    title: "Marble Glow",
+    title: "Life Guard",
     description: "Beauty that protects,\nperformance that lasts.",
-    image: "./images/popularchoices/exterior.png",
+    image: "./images/popularchoices/exterior.jpeg",
     buttonText: "View Product",
+    slug: "/product/life-guard-luxury-exterior-emulsion",
     featured: true,
     features: [
       {
@@ -30,19 +31,21 @@ export const popularChoices = [
   {
     id: 2,
     type: "Interior Emulsion",
-    title: "Princess",
-    description: "Smooth walls, Beautiful homes.",
-    image: "./images/popularchoices/interior.png",
+    title: "Super Shine",
+    description: "Rich and Smooth Finish \n For Your Walls.",
+    image: "./images/popularchoices/interior.jpeg",
     buttonText: "View Product",
     featured: false,
+    slug: "/product/super-shine-luxury-exterior-emulsion"
   },
   {
     id: 3,
-    type: "Acrylic Wall Paint",
-    title: "Smooth Finish",
-    description: "The perfect base for a\nflawless wall.",
-    image: "./images/popularchoices/acrylic.png",
+    type: "Waterproofing",
+    title: "Leak Proof",
+    description: "Excellent Water Resistance\n Prevents Water Seepage.",
+    image: "./images/popularchoices/leak-proof.jpeg",
     buttonText: "View Product",
     featured: false,
+    slug: "/product/leak-proof"
   },
 ];
