@@ -185,9 +185,9 @@ const ProductDetails = () => {
               {product.tagline}
             </h2>
 
-            <p className="mt-3 text-[12px] leading-[1.8] text-[#666] sm:text-[13px]">
+            {/* <p className="mt-3 text-[12px] leading-[1.8] text-[#666] sm:text-[13px]">
               {product.description}
-            </p>
+            </p> */}
 
             {/* Product Features */}
             <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
@@ -248,7 +248,7 @@ const ProductDetails = () => {
 
             {product.specifications?.length > 0 && (
               <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-[#eeeae5] sm:grid-cols-3">
-                {product.specifications.map((item, index) => {
+                {product.specifications.slice(0, 6).map((item, index) => {
                   const Icon = specificationIcons[item.label] || FiInfo;
 
                   return (
@@ -322,7 +322,7 @@ const ProductDetails = () => {
             </div>
 
             <div className="divide-y divide-[#f0ede9]">
-              {product.specifications.map((item) => (
+              {product.specifications.slice().reverse().map((item) => (
                 <div
                   key={item.label}
                   className="flex items-center justify-between gap-4 py-3"

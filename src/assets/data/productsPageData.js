@@ -3,9 +3,11 @@ export const categories = [
   "Waterproofing",
   "Enamel",
   "Interior",
+  "Solvent Based Primer",
   "Exterior",
   "Primer",
   "Decorative and Specialty Paints",
+  "Metal/Wood Primer",
 ];
 
 export const products = [
@@ -36,7 +38,7 @@ export const products = [
     id: 5,
     name: "Delight",
     slug: "delight",
-    category: "Enamel",
+    category: "Metal/Wood Primer",
     image: "/images/product/delight.png",
   },
   {
@@ -93,7 +95,7 @@ export const products = [
     id: 12,
     name: "Weather Protect Exterior Primer Alkali Block",
     slug: "weather-protect-exterior-primer-alkali-block",
-    category: "Primer",
+    category: "Solvent Based Primer",
     subcategory: "Exterior",
     image: "/images/product/weather-protect-primer.png",
   },
@@ -101,7 +103,7 @@ export const products = [
     id: 13,
     name: "Weather Shield Exterior Primer Alkali Block",
     slug: "weather-shield-exterior-primer-alkali-block",
-    category: "Primer",
+    category: "Solvent Based Primer",
     subcategory: "Exterior",
     image: "/images/product/weather-shield-primer.png",
   },
@@ -109,8 +111,15 @@ export const products = [
     id: 14,
     name: "DCP Interior Primer Alkali Block",
     slug: "dcp-interior-primer-alkali-block",
-    category: "Primer",
+    category: "Solvent Based Primer",
     subcategory: "Interior",
     image: "/images/product/dcp-interior-primer.png",
+  },
+  {
+    id: 15,
+    name: "Delight Auto Acrylic Emulsion",
+    slug: "delight-auto-acrylic-emulsion",
+    category: "Interior",
+    image: "/images/product/delight-auto-acrylic-emulsion.png",
   },
 ];

@@ -32,12 +32,12 @@ const ProductCategories = () => {
           </Link>
         </div>
 
-        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {categories.map((category) => (
             <Link
               key={category.id}
               to={category.link}
-              className="group relative aspect-[0.67] overflow-hidden rounded-xl bg-gray-200 bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:-translate-y-1"
+              className="group relative aspect-[0.67] md:aspect-[1] max-h-96 overflow-hidden rounded-xl bg-gray-200 bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:-translate-y-1"
               style={{
                 backgroundImage: `url(${category.image})`,
               }}
@@ -46,7 +46,7 @@ const ProductCategories = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/65 group-hover:from-white/30 via-black/30 group-hover:via-black/5 to-transparent" />
 
 
-              <div className="relative z-10 w-fit flex flex-col items-start p-5">
+              <div className="relative z-10 w-fit flex flex-col items-start p-5 md:p-7 lg:p-8">
                 <h3 className="whitespace-pre-line font-bold leading-[1.02] tracking-tight text-white text-[25px] md:text-[26px] group-hover:text-[#111] transition-colors duration-300  group-hover:text-shadow-[0_0px_0px_rgba(0,0,0,0)]">
                   {category.title}
                 </h3>

@@ -1,5 +1,12 @@
 export const categories = [
   {
+    id: 3,
+    title: "Primers",
+    description: "A stronger\nfoundation",
+    image: "./images/categories/primer.png",
+    link: "/products?category=Primer",
+  },
+  {
     id: 1,
     title: "Interior\nPaints",
     description: "Bring life to\nyour interiors",
@@ -12,13 +19,6 @@ export const categories = [
     description: "Tough protection,\nlasting beauty",
     image: "./images/categories/exterior.png",
     link: "/products?category=Exterior",
-  },
-  {
-    id: 3,
-    title: "Primers",
-    description: "A stronger\nfoundation",
-    image: "./images/categories/primer.png",
-    link: "/products?category=Primer",
   },
   {
     id: 4,
@@ -40,5 +40,19 @@ export const categories = [
     description: "Colors that\ninspire creativity",
     image: "./images/categories/decorative-speciality.png",
     link: "/products?category=Decorative%20and%20Specialty%20Paints",
+  },
+  {
+    id: 7,
+    title: "Metal/Wood Primer",
+    description: "Prepare wood and metal surfaces\nfor better paint adhesion",
+    image: "./images/categories/metal-wood-primer.png",
+    link: "/products?category=Metal/Wood%20Primer",
+  },
+  {
+    id: 8,
+    title: "Solvent Based Primer",
+    description: "The right foundation for\nsolvent-based finishing paints",
+    image: "./images/categories/solvent-based-primer.png",
+    link: "/products?category=Solvent%20Based%20Primer",
   },
 ];

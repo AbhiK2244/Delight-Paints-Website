@@ -133,10 +133,10 @@ export const products = [
     "id": 4,
     "name": "Delight",
     "slug": "delight",
-    "category": "Enamel",
+    "category": "Metal/Wood Primer",
     "image": "/images/product/delight.png",
-    "tagline": "Beautiful enamel finish for everyday surfaces.",
-    "description": "Delight Enamel is a decorative coating designed to give suitable surfaces an attractive and smooth finish. It can be used for a range of household painting requirements.",
+    "tagline": "Beautiful finish for everyday surfaces.",
+    "description": "Delight is a decorative coating designed to give suitable surfaces an attractive and smooth finish. It can be used for a range of household painting requirements.",
     "features": [
       "Smooth Decorative Finish",
       "Attractive Appearance",
@@ -147,7 +147,7 @@ export const products = [
     "specifications": [
       {
         "label": "Product Type",
-        "value": "Enamel Paint"
+        "value": "Metal/Wood Primer Paint"
       },
       {
         "label": "Finish",
@@ -165,7 +165,7 @@ export const products = [
     "howToUse": [
       "Prepare the surface by removing dust and loose paint.",
       "Apply a suitable primer if required.",
-      "Stir the enamel paint thoroughly.",
+      "Stir the paint thoroughly.",
       "Apply evenly and allow sufficient drying between coats."
     ]
   },
@@ -638,7 +638,71 @@ export const products = [
       "Mix the paint thoroughly before application.",
       "Apply evenly using a suitable brush."
     ]
-  }
+  },
+
+{
+  id: 15,
+  name: "Delight Auto Acrylic Emulsion",
+  slug: "delight-auto-acrylic-emulsion",
+  category: "Interior",
+  specialType: null,
+  image: "/images/product/delight-auto-acrylic-emulsion.png",
+  tagline: "Smart Choice. Superior Finish. Lasting Value.",
+  description:
+    "Delight Auto Acrylic Emulsion is a high-quality, budget-friendly acrylic emulsion paint designed to provide walls with a smooth matt finish and enhanced durability. Formulated with special colour-fast pigments, it offers an extensive range of up to 10,000 shades. With twice the durability and spreading capacity of conventional distemper, it provides an economical upgrade for customers seeking a better wall finish and greater value for money.",
+  features: [
+    "Smooth and Stylish Matt Finish",
+    "Twice the Durability of Conventional Distemper",
+    "Twice the Spreading Capacity of Conventional Distemper",
+    "Extensive Colour Selection of Up to 10,000 Shades",
+    "Special Colour-Fast Pigments",
+    "Budget-Friendly Upgrade Over Conventional Distemper",
+    "GreenPro Certified"
+  ],
+  warranty: null,
+  specifications: [
+    {
+      label: "Product Type",
+      value: "Acrylic Emulsion Paint"
+    },
+    {
+      label: "Finish",
+      value: "Smooth Matt Finish"
+    },
+    {
+      label: "Application",
+      value: "Wall Painting"
+    },
+    {
+      label: "Surface",
+      value: "Walls"
+    },
+    {
+      label: "Colour Range",
+      value: "Up to 10,000 Shades"
+    },
+    {
+      label: "Durability",
+      value: "Twice that of Conventional Distemper"
+    },
+    {
+      label: "Spreading Capacity",
+      value: "Twice that of Conventional Distemper"
+    },
+    {
+      label: "Certification",
+      value: "GreenPro Certified"
+    }
+  ],
+  howToUse: [
+    "Suitable for residential spaces, including living rooms and bedrooms.",
+    "Can be used on walls in homes and apartments.",
+    "Suitable for commercial spaces.",
+    "Ideal for interior wall renovation projects.",
+    "Suitable for general wall painting and refurbishment."
+  ]
+}
+
 ];
 
 export const recommendations = [
