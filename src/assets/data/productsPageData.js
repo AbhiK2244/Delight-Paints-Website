@@ -29,7 +29,7 @@ export const products = [
   {
     id: 3,
     name: "Artist Gold 500ml",
-    slug: "artist-gold",
+    slug: "delight-artist-gold-500ml",
     category: "Decorative and Specialty Paints",
     specialType: "",
     image: "/images/product/artist_gold_500ml2.png",
@@ -51,9 +51,9 @@ export const products = [
   {
     id: 4,
     name: "Artist Gold 200ml",
-    slug: "artist-gold-200ml",
+    slug: "delight-artist-gold-200ml",
     category: "Decorative and Specialty Paints",
-    specialType: "",
+    specialType: "Pearlescent Pigment",
     image: "/images/product/artist_gold_200ml2.png",
   },
   {

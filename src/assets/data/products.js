@@ -95,43 +95,70 @@ export const products = [
   {
     id: 3,
     name: "Artist Gold 500ml",
-    slug: "artist-gold",
+    slug: "delight-artist-gold-500ml",
     category: "Decorative and Specialty Paints",
-    specialType: null,
+    specialType: "Pearlescent Pigment",
     image: "/images/product/artist_gold_500ml2.png",
-    tagline: "Add a touch of elegance with a golden metallic finish.",
+    tagline:
+      "Shimmering Elegance. Mesmerizing Effects. A Touch of Artistic Luxury.",
     description:
-      "Gold Metallic Enamel is designed for decorative painting applications where a rich golden appearance is desired. It enhances suitable surfaces with an attractive metallic effect.",
+      "Delight Artist Gold is a premium decorative lustre pigment made from natural mineral mica particles coated with a thin layer of metal oxides, including titanium dioxide and iron oxide. Designed to create distinctive pearlescent and metallic visual effects, these special-effect pigments interact with light through refraction, reflection, and interference to produce beautiful shimmering appearances. Part of the Artist Pearls decorative effect range, it offers silver-white, coloured pearl, and metallic gold effects. Depending on pigment particle size, the resulting appearance can range from a subtle silky lustre to an eye-catching glitter effect, bringing artistic expression, visual depth, and luxurious shimmer to interior design applications.",
     features: [
-      "Golden Metallic Appearance",
-      "Decorative Finish",
-      "Smooth Application",
-      "Attractive Surface Finish",
+      "Premium Decorative Lustre Pigment",
+      "Natural Mineral Mica-Based Composition",
+      "Metal Oxide Coating with Titanium Dioxide and Iron Oxide",
+      "Distinctive Pearlescent and Metallic Effects",
+      "Silver-White, Coloured Pearl, and Metallic Gold Effects",
+      "Light Interaction Through Refraction, Reflection, and Interference",
+      "Variable Effects from Silky Lustre to Glitter",
+      "Angle-Dependent Colour Appearance",
+      "Suitable for Decorative Interior Design Applications",
     ],
     warranty: null,
     specifications: [
       {
         label: "Product Type",
-        value: "Metallic Enamel",
+        value: "Mica-Based Lustre Pigments",
+      },
+      {
+        label: "Product Category",
+        value: "Decorative Metallic & Pearlescent Pigments",
+      },
+      {
+        label: "Composition",
+        value: "Natural Mineral Mica Coated with Metal Oxides",
+      },
+      {
+        label: "Coating Materials",
+        value: "Titanium Dioxide and Iron Oxide",
+      },
+      {
+        label: "Decorative Effects",
+        value: "Silver-White, Coloured Pearl, and Metallic Gold",
+      },
+      {
+        label: "Optical Effects",
+        value: "Refraction, Reflection, and Interference",
       },
       {
         label: "Finish",
-        value: "Gold Metallic",
+        value: "Silky Lustre to Shimmering Glitter Effect",
       },
       {
         label: "Application",
-        value: "Brush",
+        value: "Decorative Interior Design Applications",
       },
       {
-        label: "Surface",
-        value: "Suitable Prepared Surfaces",
+        label: "Effect Variation",
+        value: "Depends on Pigment Particle Size and Viewing Angle",
       },
     ],
     howToUse: [
-      "Clean the surface thoroughly before painting.",
-      "Make sure the surface is dry and properly prepared.",
-      "Mix the paint thoroughly before application.",
-      "Apply evenly using a suitable brush.",
+      "Designed for decorative interior design applications where distinctive pearlescent and metallic visual effects are desired.",
+      "Can create silver-white, coloured pearl, and metallic gold decorative appearances.",
+      "Smaller pigment particles produce a subtle, silky lustre.",
+      "Larger pigment particles create more pronounced shimmering and glitter-like effects.",
+      "The final colour appearance can vary depending on the viewing angle due to the interaction of light with the pigment particles.",
     ],
   },
   {
@@ -642,46 +669,72 @@ export const products = [
   {
     id: 14,
     name: "Artist Gold 200ml",
-    slug: "artist-gold-200ml",
+    slug: "delight-artist-gold-200ml",
     category: "Decorative and Specialty Paints",
-    specialType: null,
+    specialType: "Pearlescent Pigment",
     image: "/images/product/artist_gold_200ml2.png",
-    tagline: "Add a touch of elegance with a golden metallic finish.",
+    tagline:
+      "Shimmering Elegance. Mesmerizing Effects. A Touch of Artistic Luxury.",
     description:
-      "Gold Metallic Enamel is designed for decorative painting applications where a rich golden appearance is desired. It enhances suitable surfaces with an attractive metallic effect.",
+      "Delight Artist Gold is a premium decorative lustre pigment made from natural mineral mica particles coated with a thin layer of metal oxides, including titanium dioxide and iron oxide. Designed to create distinctive pearlescent and metallic visual effects, these special-effect pigments interact with light through refraction, reflection, and interference to produce beautiful shimmering appearances. Part of the Artist Pearls decorative effect range, it offers silver-white, coloured pearl, and metallic gold effects. Depending on pigment particle size, the resulting appearance can range from a subtle silky lustre to an eye-catching glitter effect, bringing artistic expression, visual depth, and luxurious shimmer to interior design applications.",
     features: [
-      "Golden Metallic Appearance",
-      "Decorative Finish",
-      "Smooth Application",
-      "Attractive Surface Finish",
+      "Premium Decorative Lustre Pigment",
+      "Natural Mineral Mica-Based Composition",
+      "Metal Oxide Coating with Titanium Dioxide and Iron Oxide",
+      "Distinctive Pearlescent and Metallic Effects",
+      "Silver-White, Coloured Pearl, and Metallic Gold Effects",
+      "Light Interaction Through Refraction, Reflection, and Interference",
+      "Variable Effects from Silky Lustre to Glitter",
+      "Angle-Dependent Colour Appearance",
+      "Suitable for Decorative Interior Design Applications",
     ],
     warranty: null,
     specifications: [
       {
         label: "Product Type",
-        value: "Metallic Enamel",
+        value: "Mica-Based Lustre Pigments",
+      },
+      {
+        label: "Product Category",
+        value: "Decorative Metallic & Pearlescent Pigments",
+      },
+      {
+        label: "Composition",
+        value: "Natural Mineral Mica Coated with Metal Oxides",
+      },
+      {
+        label: "Coating Materials",
+        value: "Titanium Dioxide and Iron Oxide",
+      },
+      {
+        label: "Decorative Effects",
+        value: "Silver-White, Coloured Pearl, and Metallic Gold",
+      },
+      {
+        label: "Optical Effects",
+        value: "Refraction, Reflection, and Interference",
       },
       {
         label: "Finish",
-        value: "Gold Metallic",
+        value: "Silky Lustre to Shimmering Glitter Effect",
       },
       {
         label: "Application",
-        value: "Brush",
+        value: "Decorative Interior Design Applications",
       },
       {
-        label: "Surface",
-        value: "Suitable Prepared Surfaces",
+        label: "Effect Variation",
+        value: "Depends on Pigment Particle Size and Viewing Angle",
       },
     ],
     howToUse: [
-      "Clean the surface thoroughly before painting.",
-      "Make sure the surface is dry and properly prepared.",
-      "Mix the paint thoroughly before application.",
-      "Apply evenly using a suitable brush.",
+      "Designed for decorative interior design applications where distinctive pearlescent and metallic visual effects are desired.",
+      "Can create silver-white, coloured pearl, and metallic gold decorative appearances.",
+      "Smaller pigment particles produce a subtle, silky lustre.",
+      "Larger pigment particles create more pronounced shimmering and glitter-like effects.",
+      "The final colour appearance can vary depending on the viewing angle due to the interaction of light with the pigment particles.",
     ],
   },
-
   {
     id: 15,
     name: "Delight Auto Acrylic Emulsion",

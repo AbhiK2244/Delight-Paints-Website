@@ -130,19 +130,13 @@ const ProductDetails = () => {
         {/* Main Product Layout */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] xl:grid-cols-[minmax(320px,0.95fr)_minmax(350px,1.1fr)_minmax(280px,0.8fr)]">
           {/* Main Product Image */}
-          <div className="group relative flex min-h-[350px] max-h-[610px] items-center justify-center overflow-hidden rounded-2xl border border-[#eeeae5] bg-gradient-to-br from-[#f4f0eb] via-[#faf7f3] to-[#eee9e2] p-6 sm:min-h-[440px] sm:p-10 xl:min-h-[610px]">
+          <div className="group relative flex min-h-[440px] max-h-[610px] items-center justify-center overflow-hidden rounded-2xl border border-[#eeeae5] bg-gradient-to-br from-[#f4f0eb] via-[#faf7f3] to-[#eee9e2] p-6 sm:min-h-[440px] sm:p-10 xl:min-h-[610px]">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/60 blur-3xl" />
 
-            <span className="absolute left-5 top-5 z-10 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-[9px] font-bold uppercase tracking-wide text-[#102b4c] shadow-sm backdrop-blur-sm sm:left-6 sm:top-6 sm:text-[10px]">
+            <span className="absolute left-5 top-5 z-10 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-[#102b4c] shadow-sm backdrop-blur-sm sm:left-6 sm:top-6">
               {product.category}
               {product.subcategory && ` · ${product.subcategory}`}
             </span>
-
-            {product.specialType && (
-              <span className="absolute right-5 top-5 z-10 rounded-full bg-[#102b4c] px-3 py-2 text-[9px] font-semibold text-white sm:right-6 sm:top-6">
-                {product.specialType}
-              </span>
-            )}
 
             <img
               src={product.image}
@@ -184,10 +178,6 @@ const ProductDetails = () => {
             <h2 className="mt-2 text-[15px] font-medium leading-snug text-[#252f42] sm:text-[17px]">
               {product.tagline}
             </h2>
-
-            {/* <p className="mt-3 text-[12px] leading-[1.8] text-[#666] sm:text-[13px]">
-              {product.description}
-            </p> */}
 
             {/* Product Features */}
             <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
