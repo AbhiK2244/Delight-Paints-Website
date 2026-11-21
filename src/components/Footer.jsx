@@ -79,6 +79,22 @@ const Footer = () => {
                 Decorative & Specialty Paints
               </Link>
             </li>
+            <li>
+              <Link
+                to="/products?category=Metal/Wood%20Primer"
+                className="hover:text-[#9e2519] transition-colors"
+              >
+                Metal/Wood Primer
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/products?category=Solvent%20Based%20Primer"
+                className="hover:text-[#9e2519] transition-colors"
+              >
+                Solvent Based Primer
+              </Link>
+            </li>
           </ul>
         </div>
 
