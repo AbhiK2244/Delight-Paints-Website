@@ -870,7 +870,7 @@ export const recommendations = [
   {
     name: "Artist Gold 500ml",
     category: "Decorative and Specialty Paints",
-    slug: "artist-gold",
+    slug: "delight-artist-gold-500ml",
   },
   {
     name: "Leak Proof",
