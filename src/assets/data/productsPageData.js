@@ -36,8 +36,8 @@ export const products = [
   },
   {
     id: 5,
-    name: "Delight",
-    slug: "delight",
+    name: "Delight Wood & Metal Primer",
+    slug: "delight-wood-metal-primer",
     category: "Metal/Wood Primer",
     image: "/images/product/delight.png",
   },
@@ -121,5 +121,13 @@ export const products = [
     slug: "delight-auto-acrylic-emulsion",
     category: "Interior",
     image: "/images/product/delight-auto-acrylic-emulsion.png",
+  },
+  {
+    id: 16,
+    name: "DP Primer",
+    slug: "dp-primer",
+    category: "Primer",
+    subcategory: "Interior",
+    image: "/images/product/dp-primer.png",
   },
 ];
